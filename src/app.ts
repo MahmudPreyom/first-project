@@ -12,9 +12,17 @@ app.use(cors());
 // application routes
 app.use('/api/v1', router);
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!');
-});
+const test = (req: Request, res: Response) => {
+  // Promise.reject();
+  const a = 10;
+  res.send(a);
+};
+
+app.get('/', test);
+
+// app.get('/', (req: Request, res: Response) => {
+//   res.send('Hello World!');
+// });
 
 app.use(globalErrorHandler);
 app.use(notFound);
