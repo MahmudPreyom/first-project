@@ -20,13 +20,11 @@ router.get(
 
 router.patch(
   '/:id',
-  //   validateRequest(
-  //     SemesterRegistrationValidations.updateSemesterRegistrationValidationSchema,
-  //   ),
+  validateRequest(
+    SemesterRegistrationValidations.updateSemesterRegistrationValidationSchema,
+  ),
   SemesterRegistrationControllers.updateSemesterRegistration,
 );
-
-// router.get('/:id',SemesterRegistrationControllers.getSingleSemesterRegistration)
 
 router.get('/', SemesterRegistrationControllers.getAllSemesterRegistration);
 
